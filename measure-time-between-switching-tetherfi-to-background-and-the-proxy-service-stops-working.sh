@@ -203,16 +203,15 @@ curl_opts=(
     # Fail when HTTP return status is wrong
     --fail
 
-    # Don't print progress meter but still print error messages
+    # Don't print progress meter and error messages
     --silent
-    --show-error
 
     # Timeout threshold for the entire operation
     --max-time "${TETHERFI_RESUME_THRESHOLD_SECONDS}"
 )
 while true; do
     curl_exit_status=0
-    curl "${curl_opts[@]}" "${TEST_URL}" 2>/dev/null || curl_exit_status="${?}"
+    curl "${curl_opts[@]}" "${TEST_URL}" || curl_exit_status="${?}"
     if test "${curl_exit_status}" -eq 0; then
         printf \
             '\nInfo: Proxy service resume detected.\n'
