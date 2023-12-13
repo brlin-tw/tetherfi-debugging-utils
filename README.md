@@ -7,7 +7,7 @@ Utilities for help debugging [TetherFi](https://github.com/pyamsoft/tetherfi) is
 
 ## Disclaimer
 
-This is NOT an official product of the TetherFi project, refer [this project's own issue tracker for support](https://gitlab.com/brlin/tetherfi-debugging-utilis/-/issues)
+This is NOT an official product of the TetherFi project, refer [this project's own issue tracker for support](https://gitlab.com/brlin/tetherfi-debugging-utils/-/issues)
 
 ## Reference
 
