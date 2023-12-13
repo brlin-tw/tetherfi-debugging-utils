@@ -214,10 +214,10 @@ while true; do
     curl "${curl_opts[@]}" "${TEST_URL}" || curl_exit_status="${?}"
     if test "${curl_exit_status}" -eq 0; then
         printf \
-            '\nInfo: Proxy service resume detected.\n'
+            '\nInfo: Proxy service resume detected, recording the proxy service resume test end time...\n'
         if ! resume_end_time_epoch="$(date +%s)"; then
             printf \
-                'Error: Failed to query the resume test end time.\n' \
+                'Error: Failed to record the proxy service resume test end time.\n' \
                 1>&2
             exit 2
         fi
